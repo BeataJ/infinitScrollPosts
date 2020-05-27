@@ -2,7 +2,7 @@ const postContainer = document.getElementById('post-container');
 const loading = document.querySelector('.loader');
 const filter = document.getElementById('filter');
 
-let limit = 3;
+let limit = 5;
 let page = 1;
 
 // Fetch posts from ADI
@@ -34,5 +34,17 @@ const showPost = async () => {
   });
 };
 
+const showLoading = () => {
+  loading.classList.add('show');
+};
+
 // show initial posts
 showPost();
+
+window.addEventListener('scroll', () => {
+  const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+
+  if (scrollTop + clientHeight >= scrollHeight - 5) {
+    showLoading();
+  }
+});
