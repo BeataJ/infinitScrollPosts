@@ -36,6 +36,15 @@ const showPost = async () => {
 
 const showLoading = () => {
   loading.classList.add('show');
+
+  setTimeout(() => {
+    loading.classList.remove('show');
+
+    setTimeout(() => {
+      page++;
+      showPost();
+    }, 300);
+  }, 1000);
 };
 
 // show initial posts
