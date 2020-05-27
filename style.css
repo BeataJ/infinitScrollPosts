@@ -57,3 +57,19 @@ h1 {
 .post .post-info {
   margin-left: 20px;
 }
+
+.post .number {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  font-size: 15px;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  color: #296ca8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 10px;
+}
